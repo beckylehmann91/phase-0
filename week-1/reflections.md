@@ -30,3 +30,31 @@ It is hard to say which commands and arguments will be most important. I found i
 
 # 1.4 Forking and Cloning Reflection
 
+## Instructions
+
+### Creating a New Repository:
+
+1. On your profile page, click the “+” icon in the top, right corner of the page
+2. Select “New Repository”
+3. Enter the repository name and description (if applicable)
+4. Select whether you would like the repository to be public or private, and whether you would like one of the README, .gitignore, or license options
+5. Click “Create repository”
+
+### Forking a Repository:
+
+1. Navigate to the page of the repository you would like to fork
+2. Click on the “fork” icon on the upper right-hand side of the page (specify your profile as the location, if prompted)
+3. Check your profile to see if the repository was successfully forked
+
+### Cloning a Repository:
+
+1. Copy the URL (in GitHub) of the repository you would like to clone
+2. In your terminal (CLI), navigate to the directory where you would like to put the cloned repository (you can check your current directory with “pwd” and change to the desired directory with “cd”)
+3. Once in the directory, enter the “git clone” command, followed by the URL you copied above
+4. To ensure it worked correctly, use the “cd” command to change to the cloned repository; use “ls” to list the files. If the repository is cloned and complete, it should contain all the directories of the original repository on GitHub
+
+## Additional Comments
+
+If you are collaborating on a project with other members, or want to use existing files and information to work independently, forking can be incredibly useful. It essentially copies the existing repository to your GitHub profile. For these purposes, forking is better than creating a repository because with the latter you are “starting from scratch.” Forking allows you to use the information in the forked repository and make changes/edits without affecting the original files.
+
+As for setting up git and GitHub, I didn’t have any difficulties because I already had the software and account set up. However, I think it’s important for anyone using git and GitHub to understand the differences between the two. When I first started using them, I found the local vs. remote repository distinction to be a bit confusing.
