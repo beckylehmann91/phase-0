@@ -1,5 +1,5 @@
-![Index-Wireframe](/week-2/wireframes/wireframe-index.jpg)
-![Blog-Wireframe](/week-2/wireframes/wireframe-blog-index.jpg)
+![Index-Wireframe](../beckylehmann91.github.io/imgs/wireframe-index.jpg)
+![Blog-Wireframe](../beckylehmann91.github.io/imgs/wireframe-blog-index.jpg)
 
 - What is a wireframe?
 
