@@ -1,0 +1,55 @@
+html {
+    color:#000080;
+    background-color:#ffffff;
+}
+
+a:link {
+    color: #800080;
+}
+
+a:visited {
+    color:#ff0000;
+}
+.description{
+    font-size:8px;
+}
+h1{
+    font-weight:bold;
+    font-size:20px;
+    text-align:center;
+}
+.separateletters{
+    font-size:30px;
+}
+
+.columns{
+    column-count:2;
+}
+
+.geico {
+    text-align: center;
+    font-size: 10px;
+}
+
+.newline{
+    display:block;
+}
+
+.left-section {
+   float: left;
+   clear:both;
+   display: inline-block;
+   z-index:
+}
+
+.right-section {
+    float: right;
+    clear: both;
+    display: inline-block;
+}
+
+.hline {
+    width:100%;
+    height:1px;
+    background: #fff
+}
