@@ -187,3 +187,25 @@ font-weight:bold;
     border-style: dotted;
 }
 
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+When linking an external file to an HTML file, it is important to include the link in the head of the HTML, using the format <link rel="stylesheet" type="text/css" href="[insert ref to stylesheet]">. It is also important to specify any meta tags you would like to use, such as <meta charset="utf-8">, which indicates the character encoding for the HTML document.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+My partner and I manipulated margins and padding for various elements. We also broke the two ul's into sections using a table. In so doing, we were able to create the "column" effect with the list of links. We also used many classes in order to break up the elements into sections on the page. It was pretty difficult to get the site how we wanted it. However, by talking through a high-level strategy first (pseudocoding, too) then writing the code, we were able to come up with a viable solution.
+
+What CSS did you use to modify the element style (like size, color, etc.)?
+
+We made several edits to the font style, including font-family, color, font-weight and font-size. We also edited the background-color and border-styles for extra effect.
+
+Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+
+Yes, we included multiple classes within the code. In general, classes tend to be more effective when it comes to CSS because they apply to more than one HTML element. For elements that required the same formatting (ex. the small descriptions below some of the list items), classes were really helpful.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+I think our code better followed best practices because we did not incorporate styling elements into the HTML. On the actual site, many of the HTML tags include aspects like font-size, height and width, which is considered bad practice (should be included in CSS).
+
+*/
