@@ -1,23 +1,23 @@
 #Chrome DevTools Reflection
 
 ##Exercise 1:
-![Exercise 1](../imgs/3.4_1.png)
+![Exercise 1](./imgs/3.4_1.png)
 ##Exercise 2:
-![Exercise 2](../imgs/3.4_2.png)
+![Exercise 2](./imgs/3.4_2.png)
 ##Exercise 3:
-![Exercise 3](../imgs/3.4_3.png)
+![Exercise 3](./imgs/3.4_3.png)
 ##Exercise 4:
-![Exercise 4](../imgs/3.4_4.png)
+![Exercise 4](./imgs/3.4_4.png)
 ##Exercise 5:
-![Exercise 5](../imgs/3.4_5.png)
+![Exercise 5](./imgs/3.4_5.png)
 ##Exercise 6:
-![Exercise 6](../imgs/3.4_6.png)
+![Exercise 6](./imgs/3.4_6.png)
 ##Exercise 7:
-![Exercise 7](../imgs/3.4_7.png)
+![Exercise 7](./imgs/3.4_7.png)
 ##Exercise 8:
-![Exercise 8](../imgs/3.4_8.png)
+![Exercise 8](./imgs/3.4_8.png)
 ##Exercise 9:
-![Exercise 9](../imgs/3.4_9.png)
+![Exercise 9](./imgs/3.4_9.png)
 
 - How can you use Chrome's DevTools inspector to help you format or position elements?
 
