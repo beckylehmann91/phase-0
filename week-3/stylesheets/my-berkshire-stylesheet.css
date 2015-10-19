@@ -1,71 +1,189 @@
+/* ----------------------- SELECTORS--------------------- */
+
 html {
+
     color:#000080;
     background-color:#ffffff;
+
 }
 
-a:link {
-    color: #800080;
-}
+h3 {
 
-a:visited {
-    color:#ff0000;
-}
-.description{
-    font-size:8px;
-}
-h1{
+    font-family: sans-serif;
     font-weight:bold;
     font-size:20px;
     text-align:center;
-}
-.separateletters{
-    font-size:30px;
+    display:block;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+
 }
 
-.columns{
-    column-count:2;
+li {
+
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+    margin-right: 0.35em;
+    text-align: left;
+
 }
 
-.geico {
-    text-align: center;
+ul {
+
+    margin: 0.625em;
+}
+
+td {
+
+    margin: 0.03em;
+    padding: 0.05em;
+}
+
+table {
+
+    width: 97%;
+}
+
+a {
+
+    color: #800080;
+
+}
+
+
+/* ----------------------- CLASSES --------------------- */
+
+.description {
+
+    font-size:8px;
+
+}
+
+.hline{
+
+border-bottom:
+
+}
+
+/* LINK SELECTORS */
+
+a:link {
+
+    color: #800080;
+
+}
+
+a:visited {
+
+    color:#ff0000;
+
+}
+
+/* FONT PROPERTIES*/
+
+.fxsmall {
+
     font-size: 10px;
 }
 
-.newline{
+.fsmall {
+
+    font-size: 13px;
+}
+
+.fmed {
+
+    font-size: 16px;
+}
+
+.fbold {
+
+font-weight:bold;
+
+}
+
+/* MARGIN OPTIONS */
+
+.xsmarg {
+
+    margin: 0;
+    padding: 0;
+}
+
+/* IMAGE OPTIONS */
+
+.images {
+
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1em;
+    width:  6em;
+
+}
+
+.img-size {
+
+    display: block;
+    height:25em;
+    width: 40em;
+    border-radius: 300em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+/* CSS BREAK */
+
+.nline {
+
     display:block;
+
 }
 
-.left-section {
-   float: left;
-   clear:both;
-   display: inline-block;
-   z-index:
+/* DEBUG */
+
+.debug {
+
+    border: 1px solid red;
 }
 
-.right-section {
-    float: right;
-    clear: both;
-    display: inline-block;
+/* HORIZONTAL LINE */
+
+.line {
+
+    border-bottom: 1px solid #949494;
+
 }
 
-.hline {
-    width:100%;
-    height:1px;
-    background: #fff
+/* MISC */
+
+.separateletters {
+
+    font-size:32px;
+    font-family: cursive;
+
 }
 
-/*
+.middle{
 
-What is important to know when linking an external file (like a stylesheet) to an HTML file?
+    text-align: center;
 
+}
 
+.pad {
 
-What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+    padding: 0.2em;
+    margin-left: 0.2em;
+}
 
-What CSS did you use to modify the element style (like size, color, etc.)
+.round {
 
-Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+    border-radius: 1em;
+    background-color: #99FF66;
+    border-style: dotted;
+}
 
-When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
-
-*/
