@@ -28,38 +28,35 @@ def total(array)
   end
   return x
 end
+
 # 3. total refactored solution
+=begin
+The first one worked, but then I did some research on different methods in Ruby that could be more efficient. I found ones like "inject" and "reduce," and decided to go with reduce(:+). I also decided to try using array indexes rather than the length function: array[0..-1] establishes a range and references the first and last elements within the array.Seems to work out fine!
+=end
 
-
+def total(array)
+  array[0..-1].reduce(:+)
+end
 
 # 4. sentence_maker pseudocode
 # make sure all pseudocode is commented out!
-# Input:
-# Output:
+# Input: Array
+# Output: Sentence, including all strings within the array.
 # Steps to solve the problem.
 
-# Capitalize first part of array
-# Ends with period
-# Every other word is lowercase
-
-
+# 1) Capitalize first word in array
+# 2) Ends with period
+# 3) Every other word is lowercase
 
 # 5. sentence_maker initial solution
-
 def sentence_maker(array)
-  x = 0
-  sentence = ""
-  while x < array.length
-    if x == 0
-      sentence += array[0].capitalize.to_s + " "
-    elsif x == array.length - 1
-      sentence += array[-1].downcase.to_s + "."
-    else (x != array.length - 1) && (x != 0)
-      sentence += array[x].downcase.to_s + " "
-    end
-    x += 1
-  end
-  return sentence
+  array[0].capitalize!
+  array.join(" ") << "."
 end
 
 # 6. sentence_maker refactored solution
+# Combine two sections above into one line. Theoretically, capitalizing the array should be the same as capitalizing the first element (array[0])
+
+def sentence_maker(array)
+  array.join(" ").capitalize << "."
+end
