@@ -1,0 +1,56 @@
+html {
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+h1 {
+  background-color: rgb(35, 142, 228);
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter;
+  margin-bottom: 0%;
+  padding: 2em;
+  padding-left: 1em;
+}
+
+header > p {
+  background-color: rgba(169, 169, 169, 0.26);
+  margin-top: 0%;
+  padding: 1.5em;
+}
+
+section {
+  font-size: 12px;
+}
+
+.column-1 {
+  float: left;
+  display: inline-block;
+  width: 45%;
+  margin-left: 3%
+}
+
+.column-2 {
+  float: right;
+  display: inline-block;
+  width: 45%;
+  margin-right: 5%;
+  margin-left: 2%;
+}
+
+a:link {
+  text-decoration: none;
+  color: green;
+}
+
+a:hover {
+  color:blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+footer {
+  clear: both;
+}
