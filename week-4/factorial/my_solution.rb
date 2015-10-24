@@ -10,7 +10,7 @@ def factorial(number)
   if number == 0
     return 1
   else
-    while number > n
+    while number > 0
       x = x * number
       number -= 1
     end
