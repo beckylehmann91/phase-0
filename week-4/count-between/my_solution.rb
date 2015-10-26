@@ -15,8 +15,9 @@
 # Your Solution Below
 
 def count_between(list_of_integers, lower_bound, upper_bound)
-  if
-  for num in count_between[1..2]
-    return count_between[0].count
+  if lower_bound > upper_bound
+    return 0
+  else
+    list_of_integers.count { |num| (lower_bound..upper_bound).include?(num)}
   end
 end
