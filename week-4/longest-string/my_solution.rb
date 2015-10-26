@@ -13,6 +13,5 @@
 
 # Your Solution Below
 def longest_string(list_of_words)
-  list_of_words.sort_by { |string| string.length }
-  return list_of_words[-1]
+  list_of_words.max_by { |string| string.length}
 end
