@@ -51,7 +51,7 @@ def mode(array)
   new_array= []
   hash.select do |key, value|
     if value == mode_value
-      new_array.push(key)
+      new_array << key
     end
   end
   return new_array
@@ -74,6 +74,6 @@ It was pretty difficult to switch between arrays and hashes. We were both famili
 
 What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
 
-We found the "values" and "max" methods for hashes to be essential in creating a solution. We also found it necessary to use the "each" method to iterate through all elements of the original array.
+We found the "values" and "max" methods for hashes to be essential in creating a solution. We also found it necessary to use the "each" method to iterate through all elements of the original array. To be honest, I struggled a bit with the refactoring portion, as I wasn't sure how to use different methods to achieve the same outcome. That's not to say that my solution is the best or only way to solve the problem, but I think I need to do more research on methods in order to understand how to approach the problem differently. At this time, other methods are difficult to implement, but I'd like to come back to this problem later this week to see if I can solve it in a totally new way.
 
 =end
