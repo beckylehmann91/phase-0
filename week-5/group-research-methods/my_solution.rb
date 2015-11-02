@@ -96,7 +96,6 @@ end
 In both cases, I first created a multidimensional array to capture the objects that did or did not fulfill the conditions specified within the challenge. In the integer portion, I used ".is_a?(Integer)" to filter out any integer values. I then used the ".push" method to insert the integer values into the first array, and any other values into the second. I was able to reference the first and second arrays using index values 0 and 1 for new_array. In the second example, I used a similar process, sorting the arrays by age instead (here, I use the variable "age" rather than the hard-coded value of "4" given in the challenge). In this example, I needed to push the key/value pairs as arrays into new_array[0] and new_array[1], which I achieved by bracketing the "key, value" within the push method.
 =end
 
-
 # Release 1: Identify and describe the Ruby method you implemented. Teach your
 # accountability group how to use the methods.
 =begin

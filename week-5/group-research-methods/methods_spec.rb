@@ -123,7 +123,6 @@ describe 'PERSON 5: my_array_splitting_method' do
 
 end
 
-
 describe 'PERSON 5: my_hash_splitting_method' do
   let(:my_family_pets_ages) {{"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0, "Ditto" => 3}}
 
