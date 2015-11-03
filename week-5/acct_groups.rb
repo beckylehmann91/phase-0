@@ -15,7 +15,8 @@ def create_groups(list_of_names)
   require "enumerator"
   list_of_names.enum_for(:each_slice, 5).to_a
   if list_of_names.length % 5 == 1 || list_of_names.length % 5 == 2
-    list_of_names.enum_for(:each_slice, 5).to_a.join[-1..-2]
+    list_of_names.enum_for(:each_slice, 5).to_a
+    list_of_names[-1..-2].join
   end
 end
 
