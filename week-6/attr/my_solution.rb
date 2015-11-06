@@ -1,24 +1,42 @@
 #Attr Methods
 
-# I worked on this challenge [by myself, with:]
+# I worked on this challenge by myself.
 
-# I spent [#] hours on this challenge.
+# I spent 2 hours on this challenge.
 
 # Pseudocode
 
-# Input:
-# Output:
+# Input: Variable @name with my name ("Becky")
+# Output: Greeting, including my name
 # Steps:
+# Create a class NameData that initializes a variable @name with my name
+# Include a method attr_accessor that will indicate a symbol :name, so that it can be reference in another method
+# Define a class Greetings that initializes an instance of NameDate
+# Include a method attr_accessor that will indicate a symbol :name, so that it can reference :name from another method
+# Within Greetings, include a method "hello" that displays a greeting to the console
 
 class NameData
+  attr_accessor :name
 
+  def initialize
+    @name = "Becky"
+  end
 end
-
 
 class Greetings
+  attr_accessor :name
 
+  def initialize
+    @greeting = NameData.new
+  end
+
+  def hello
+    p "Hello, #{@greeting.name} - It's great to see you!"
+  end
 end
 
+greet = Greetings.new
+p greet.hello
 
 
 # Reflection
@@ -70,5 +88,23 @@ Attr_reader and attr_writer were replaced.
 - Is this code simpler than the last?
 
 Yes, this code is simpler than the last because it uses one method, attr_accessor, in place of two.
+
+Release 5:
+What is a reader method?
+
+A reader method (attr_reader) is used for instance variables that are assigned a value in one class, which you want to be "read" in a different class.
+
+What is a writer method?
+
+A writer method (attr_writer) serves a similar purpose to a reader method, but is included when you also want to be able to change the value of the instance method later in the code.
+
+What do the attr methods do for you?
+
+The attr methods allow you to reference instance variables from one class in another class. Instance variables are otherwise limited to the class in which they are defined.
+
+Should you always use an accessor to cover your bases? Why or why not?
+What is confusing to you about these methods?
+
+You should not always use an accessor to cover your bases. First of all, it could cause serious issues if there is a bug in the code later on. Also, it could have security implications, as you don't want attributes (information) to be overly accessible. I'm still a bit confused about how to use and reference them. I'm not sure I totally understand why they are defined as symbols instead of as the instance variables themselves (ex. :name instead of @name). I'm hoping this will become clearer with more practice.
 
 =end
