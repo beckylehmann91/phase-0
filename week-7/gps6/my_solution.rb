@@ -1,7 +1,7 @@
 # Virus Predictor
 
 # I worked on this challenge with Will Granger.
-# We spent [#] hours on this challenge.
+# We spent 2 hours on this challenge.
 
 # EXPLANATION OF require_relative
 # Require_relative links the rb file to another file, such as
@@ -78,6 +78,48 @@ class VirusPredictor
 end
 
 #=======================================================================
+class VirusPredictor
+
+  def initialize(state_of_origin, population_density, population)
+    @state = state_of_origin
+    @population = population
+    @population_density = population_density
+  end
+
+  def virus_effects
+    predicted_deaths()
+    speed_of_spread()
+  end
+
+  private
+
+  def predicted_deaths()
+    if @population_density >= 200
+      number_of_deaths = (@population * 0.4).floor
+    elsif @population_density >= 50
+      number_of_deaths = (((@population_density/50)/10.0)*@population).floor
+    else
+      number_of_deaths = (@population * 0.05).floor
+    end
+
+    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+
+  end
+
+  def speed_of_spread()
+    case @population_density
+      when 150...200 then speed = 1
+      when 101..150 then speed = 1.5
+      when 51..100 then speed = 2
+      when 0..50 then speed = 2.5
+      else speed = 0.5
+    end
+
+    puts " and will spread across the state in #{speed} months.\n\n"
+
+  end
+
+end
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
