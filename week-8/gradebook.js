@@ -60,6 +60,9 @@ gradebook.getAverage("Elizabeth")
 for(var counter = 0; counter < students.length; counter ++)
   gradebook[students[counter]] = {};
 
+// for(var index = 0; index < students.length; index ++)
+//  gradebook[students[index]]["testScores"] = scores[index];
+
 gradebook["Joseph"]["testScores"] = scores[0];
 gradebook["Susan"]["testScores"] = scores[1];
 gradebook["William"]["testScores"] = scores[2];
@@ -85,14 +88,19 @@ gradebook.getAverage("Elizabeth");
 
 // __________________________________________
 // Reflect
+/*
+- What did you learn about adding functions to objects?
 
+I thought it was interesting that for the getAverage function, we created a separate function to establish a general formula for calculating average. It does make me a bit more thoughtful about when I should create global functions versus functions nested in an object (or, what to include in each). I imagine if we were to have continued the code to include additional objects that needed to calculate function-specific averages, the basic “average” function would make the code more “DRY.”
 
+- How did you iterate over nested arrays in JavaScript?
 
+My partner and I used a couple different approaches for iterating over nested arrays in JavaScript. First, we added properties to the gradebook object and its nested objects by using bracket notation. This was effective, but a bit repetitive. In our refactored solution, we instead used a “for” loop to iterate through each item in the students array. This allowed us to create nested objects for each item, regardless of the length of the students array.
 
+- Were there any new methods you were able to incorporate? If so, what were they and how did they work?
 
-
-
-
+In our refactored solution, we used “reduce” to sum the elements in the “average” function. I have used reduce before in Ruby, but never in JavaScript. It allowed us to iterate through the array of integers without using a “for” loop.
+*/
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
