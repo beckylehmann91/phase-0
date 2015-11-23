@@ -33,19 +33,31 @@ var votes = {
   "Zane": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Mary" }
 }
 
-// Tally the votes in voteCount.
+// __________________________________________
+// Pseudocode
+
+// Create function voteCount that will iterate through object votes, increment
+// vote count.
+// FOR each KEY within each PROPERTY of VOTES, need to iterate
+// through and reference corresponding KEY in voteCount; insert
+// value as a KEY and add 1 to its value
+// title[name] is the vote cast. We want to add that string to the // corresponding property of voteCount. e.g. if we vote for Bob for // president we want to create a property inside
+// voteCount[president] called "Bob". IF "Bob" is already in there,
+// add 1 to its value. ELSE create the property "Bob"
+    // IF voteCount[president]["Bob"] == undefined
+
+// Once the votes have been tallied, assign each officer position the name of the
+// student who received the most votes.
+
+// __________________________________________
+// Initial Solution
+
 var voteCount = {
   president: {},
   vicePresident: {},
   secretary: {},
   treasurer: {}
 }
-
-var currentPresident
-var currentPresidentVoteNumber = 0
-
-var currentVice
-var currentViceVoteNumber = 0
 
 function count(object) {
   for(var student in object) {
@@ -58,46 +70,9 @@ function count(object) {
           voteCount[title][name]++;
         console.log(voteCount[title]);
       }
-    var votes_array = [];
-    votes_array.push(voteCount[title][name])
-    var highest_votes = Math.max(votes_array)
-    if (voteCount[title][name] = highest_votes)
-      officers[title] = name;
-    }
-
-        // console.log(ballot);
-        // console.log(name);
-      // console.log(title[name]);
-    // title[name] is the vote cast. We want to add that string to the corresponding property of voteCount. e.g. if we vote for Bob for president we want to create a property inside voteCount[president] called "Bob". IF "Bob" is already in there, add 1 to its value. ELSE create the property "Bob"
-    // IF voteCount[president]["Bob"] == undefined
   }
-  // officers[title] = Math.max(voteCount[title]);
-  // var presidentWinner = undefined;
-  // var vicePresidentWinner
-
-  // for
 }
 
- // Iterate through each title object in voteCount
- // for each title (e.g. president) iterate through and set some winner var to the value of each if it is larger than what winner currently is.
-
-// function callWinner(object) {
-//   for(var title in voteCount) {
-//     var tally = voteCount[title]
-//     winnerNumber = undefined
-
-//     for(var name in tally)
-//       if(winnerNumber < tally[name])
-//         winner = name;
-//         winner
-//   }
-
-// }
-
-count(votes);
-
-/* Once the votes have been tallied, assign each officer position the name of the
-student who received the most votes. */
 var officers = {
   president: undefined,
   vicePresident: undefined,
@@ -105,39 +80,88 @@ var officers = {
   treasurer: undefined
 }
 
+function callWinner() {
+  for(var title in voteCount) {
+    var winnerNumber = 0;
+    var winner = undefined;
+    for(var name in voteCount[title]) {
+      if(winnerNumber < voteCount[title][name]) {
+        winner = name;
+        winnerNumber = voteCount[title][name];
+      }
+    }
+    officers[title] = winner;
+  }
+}
 
-// Pseudocode
-
-// Create function that will iterate through object votes, increment
-// vote count.
-// FOR each KEY within each PROPERTY of VOTES, need to iterate
-// through and reference corresponding KEY in voteCount; insert
-// value as a KEY and add 1 to its value
-
-// __________________________________________
-// Initial Solution
-
-
-
-
-
-
+count(votes);
+callWinner();
+console.log(officers)
 
 // __________________________________________
 // Refactored Solution
 
+var voteCount = {
+  president: {},
+  vicePresident: {},
+  secretary: {},
+  treasurer: {}
+}
 
+function count(object) {
+  for(var student in object) {
+    var ballot = object[student];
+      for(var title in ballot){
+        var name = ballot[title];
+        if (voteCount[title][name] === undefined)
+          voteCount[title][name] = 1;
+        else
+          voteCount[title][name]++;
+        console.log(voteCount[title]);
+      }
+  }
+}
 
+var officers = {
+  president: undefined,
+  vicePresident: undefined,
+  secretary: undefined,
+  treasurer: undefined
+}
 
+function callWinner() {
+  for(var title in voteCount) {
+    var winnerNumber = 0;
+    var winner = undefined;
+    for(var name in voteCount[title]) {
+      if(winnerNumber < voteCount[title][name]) {
+        winner = name;
+        winnerNumber = voteCount[title][name];
+      }
+    }
+    officers[title] = winner;
+  }
+}
 
+count(votes);
+callWinner();
+console.log(officers)
 
 // __________________________________________
 // Reflection
+/*
+What did you learn about iterating over nested objects in JavaScript?
 
+I found iterating over nested objects to be quite difficult in JavaScript, more difficult than it is for me in Ruby. While the "for...in" method was effective in accessing nested values, I found it to be quite confusing and tedious. There must be a better way!
 
+Were you able to find useful methods to help you with this?
 
+My partner and I used "for...in" quite a bit in this challenge. I found it to be somewhat cumbersome, honestly. It was easy to get lost in the levels of nesting, so my partner and I created more descriptive variable names to clarify the value we were getting at. I imagine something like recursion could potentially cut down on the amount of code (and confusion) involved, but I wasn't able to figure out how to write that.
 
+What concepts were solidified in the process of working through this challenge?
 
+The challenge helped to solidfy my knowledge of iterating over nested objects in JavaScript. It also pushed me to refine my JS syntax, as I found it easy to get lost with all the curly braces and semicolons. I definitely want to practice iterative functions/methods, in the next week.
+*/
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
